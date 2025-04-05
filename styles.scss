@@ -1,0 +1,77 @@
+// Variáveis
+$cor-primaria: #3498db;
+$cor-secundaria: #f1c40f;
+$cor-fundo: #f9f9f9;
+$cor-texto: #333;
+
+// Estilos globais
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: $cor-fundo;
+    color: $cor-texto;
+}
+
+// Header
+header {
+    background-color: $cor-primaria;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+// Produtos
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.produto {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+}
+
+.produto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.produto h2 {
+    margin-top: 0;
+}
+
+// Responsividade
+@media (max-width: 768px) {
+    .produto {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        width: 100%;
+    }
+}
+
